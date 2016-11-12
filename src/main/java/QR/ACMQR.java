@@ -35,7 +35,7 @@ public class ACMQR extends JFrame implements Runnable, ThreadFactory {
     private JFrame frame;
     private JLabel label = new JLabel();	
     
-    public void init() {
+    public void main() {
         Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
         getContentPane().setLayout(null);
         Dimension size = WebcamResolution.QVGA.getSize();
@@ -100,7 +100,7 @@ public class ACMQR extends JFrame implements Runnable, ThreadFactory {
                 if (result != null) {
                     DB db = new DB();
                     try {
-                        db.register(result.getText(), "Dummy"); 
+                        db.register(result.getText(), "Sucessfully Registered!"); 
                         checkAttendance(result.getText());
                     } catch (Exception ex) {
                         JOptionPane.showMessageDialog(null, "Error: \""+result.getText()+"\" not in database.");
