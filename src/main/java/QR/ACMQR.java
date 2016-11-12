@@ -128,7 +128,7 @@ public class ACMQR extends JFrame implements Runnable, ThreadFactory {
     
     public static void main(String[] args) {
         ACMQR acm = new ACMQR();
-        acm.init();
+        acm.main();
         acm.run();
     }
 }
